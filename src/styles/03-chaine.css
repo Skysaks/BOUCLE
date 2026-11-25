@@ -1,0 +1,10 @@
+/* La chaîne */
+.chain{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 6px 8px}
+.chain::before{content:"";position:absolute;left:10%;right:10%;top:25px;height:2px;background:var(--line)}
+.link{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:0;cursor:pointer;padding:0 2px;min-width:0}
+.link .dot{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--line);font-family:var(--f-mono);font-size:.85rem;font-weight:500;position:relative}
+.link.on .dot{border-color:var(--pitch);background:var(--pitch-soft)}
+.link.here .dot{background:var(--pitch);color:var(--pitch-ink);border-color:var(--pitch)}
+.link .lbl{font-family:var(--f-display);font-weight:600;font-size:.88rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.link .sub{font-size:.72rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+

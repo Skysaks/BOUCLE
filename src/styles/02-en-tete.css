@@ -1,0 +1,9 @@
+/* Header */
+header.top{padding-block:18px 10px;display:grid;gap:14px}
+.brandrow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:2px;min-width:0}
+.brand h1{font-size:2.1rem;font-weight:700;line-height:.95;display:flex;align-items:center;gap:10px}
+.brand h1 .loopmark{width:30px;height:30px;flex:none}
+.brand .tag{font-size:.95rem;color:var(--muted)}
+.teamchip{font-family:var(--f-display);font-weight:600;font-size:1rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;white-space:nowrap}
+

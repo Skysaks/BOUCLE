@@ -1,0 +1,62 @@
+{
+  "name": "Boucle",
+  "repo": "Skysaks/BOUCLE",
+  "lang": "fr",
+  "budgetKo": 400,
+  "pages": [
+    {
+      "src": "src/index.html",
+      "out": "dist/boucle.html",
+      "site": "index.html",
+      "e2e": {
+        "ready": "#main .card",
+        "flows": [
+          {
+            "name": "les cinq vues de la boucle",
+            "steps": [
+              {
+                "click": "#tabs [data-view=sujets]",
+                "see": "#main .card"
+              },
+              {
+                "click": "#tabs [data-view=decisions]",
+                "see": "#main .card"
+              },
+              {
+                "click": "#tabs [data-view=memoire]",
+                "see": "#main .card"
+              },
+              {
+                "click": "#tabs [data-view=boucles]",
+                "see": "#main .card"
+              },
+              {
+                "click": "#tabs [data-view=debrief]",
+                "see": "#main .card"
+              }
+            ]
+          },
+          {
+            "name": "la chaîne mène à la vue concernée",
+            "steps": [
+              {
+                "click": "#chain [data-view=sujets]",
+                "see": "#main .card"
+              },
+              {
+                "click": "#teamchip",
+                "see": "#main .card"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "card": {
+    "kicker": "Football · staff technique",
+    "tagline": "Du débrief d'après-match à la décision d'entraînement, puis à sa revue.",
+    "background": "#0E1612",
+    "accent": "#2E9A66"
+  }
+}
