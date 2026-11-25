@@ -26,5 +26,5 @@ et les failles de dépendances déjà suivies en amont.
 - Toutes les valeurs affichées passent par `esc()` ; les réponses du modèle sont validées (énumérations, longueurs, nombre d'éléments) avant toute écriture.
 - En démonstration, aucune donnée ne quitte le navigateur ; seul le brouillon du débrief est conservé dans `localStorage`.
 - **Chaîne de build minimale** : aucune dépendance d'exécution ; une seule dépendance de développement
-  (Playwright, pour les tests), surveillée par Dependabot et `npm audit` en CI. Actions GitHub épinglées
+  (Playwright, pour les tests), contrôlée par `npm audit` à chaque exécution de la CI. Actions GitHub épinglées
   par empreinte SHA, jeton de CI en lecture seule.
