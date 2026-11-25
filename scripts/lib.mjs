@@ -132,7 +132,9 @@ export function privacyFindings() {
       rules.push([new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), 'terme personnel']);
     }
   }
-  const allow = (config.privacy?.allow ?? []).map((s) => new RegExp(s, 'i'));
+  // Domaines réservés aux exemples (RFC 2606) et adresses techniques de GitHub : jamais personnels.
+  const reserved = ['@[\\w.-]+\\.(?:example|test|invalid|localhost)$', '@users\\.noreply\\.github\\.com$'];
+  const allow = [...reserved, ...(config.privacy?.allow ?? [])].map((s) => new RegExp(s, 'i'));
   const skip = new Set(['package-lock.json', '.prive-termes.txt', ...(config.privacy?.skip ?? [])]);
   const out = [];
   for (const f of trackedFiles()) {
